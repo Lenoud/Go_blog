@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  mode: debug
+
+mysql:
+  host: 192.168.100.153
+  port: 3306
+  username: root
+  password: 123456
+  database: blog
+  charset: utf8mb4
+  max_idle_conns: 10
+  max_open_conns: 100
+
+mongodb:
+  uri: mongodb://admin:123456@192.168.100.153:27017
+  database: blog
+
+redis:
+  cluster:
+    - 192.168.100.30:6379
+    - 192.168.100.30:6389
+    - 192.168.100.30:6399
+    - 192.168.100.31:6379
+    - 192.168.100.31:6389
+    - 192.168.100.31:6399
+  password: "123456"
+
+jwt:
+  secret: your-secret-key
+  expire: 24h # token过期时间 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 - 博客系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">博客系统</a>
+        </div>
+        <div class="nav-menu">
+            <a href="/" class="nav-item">首页</a>
+            <a href="/categories.html" class="nav-item">分类</a>
+            <div class="nav-item user-menu" id="userMenu">
+                <span class="user-name">未登录</span>
+                <div class="dropdown-menu">
+                    <a href="/login.html" class="dropdown-item" id="loginBtn">登录</a>
+                    <a href="/register.html" class="dropdown-item" id="registerBtn">注册</a>
+                    <a href="/dashboard.html" class="dropdown-item" id="dashboardBtn" style="display: none;">控制台</a>
+                    <a href="#" class="dropdown-item" id="logoutBtn" style="display: none;">退出</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="post-detail" id="postDetail">
+            <div class="post-header">
+                <h1 class="post-title"></h1>
+                <div class="post-meta">
+                    <span class="post-author"></span>
+                    <span class="post-category"></span>
+                    <span class="post-date"></span>
+                </div>
+            </div>
+            <div class="post-content"></div>
+            <div class="post-actions" id="postActions" style="display: none;">
+                <a href="#" class="btn btn-primary" id="editPostBtn">编辑文章</a>
+                <button class="btn btn-danger" id="deletePostBtn">删除文章</button>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 博客系统. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/post.js"></script>
+</body>
+</html> 

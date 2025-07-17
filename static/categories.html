@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类管理 - 博客系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">博客系统</a>
+        </div>
+        <div class="nav-menu">
+            <a href="/" class="nav-item">首页</a>
+            <a href="/categories.html" class="nav-item active">分类</a>
+            <div class="nav-item user-menu" id="userMenu">
+                <span class="user-name">未登录</span>
+                <div class="dropdown-menu">
+                    <a href="/login.html" class="dropdown-item" id="loginBtn">登录</a>
+                    <a href="/register.html" class="dropdown-item" id="registerBtn">注册</a>
+                    <a href="/dashboard.html" class="dropdown-item" id="dashboardBtn" style="display: none;">控制台</a>
+                    <a href="#" class="dropdown-item" id="logoutBtn" style="display: none;">退出</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="categories-page">
+            <div class="categories-header">
+                <h1>分类管理</h1>
+                <button class="btn btn-primary" id="createCategoryBtn">
+                    <i class="fas fa-plus"></i> 新建分类
+                </button>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- 分类列表将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 新建/编辑分类模态框 -->
+    <div class="modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">新建分类</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="categoryForm">
+                    <div class="form-group">
+                        <label for="categoryName">分类名称</label>
+                        <input type="text" id="categoryName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categorySlug">分类别名</label>
+                        <input type="text" id="categorySlug" name="slug" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">保存</button>
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 博客系统. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/categories.js"></script>
+</body>
+</html> 
