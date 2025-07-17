@@ -1,4 +1,4 @@
-<img width="1912" height="932" alt="image" src="https://github.com/user-attachments/assets/b93b2388-2e36-446a-b5c2-c71c2807065e" /># Blog System
+# Blog System
 
 一个基于Go语言开发的博客系统
 
